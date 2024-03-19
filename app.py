@@ -1,6 +1,10 @@
 import os
 
-restaurantes = ['pizza', 'sushi']
+restaurantes = [{'nome' : 'Praça', 'categoria': 'Chinesa', 'ativo': False},
+               {'nome' : 'pizza Suprema', 'categoria': 'Pizza', 'ativo': True},
+               {'nome' : 'Cantina', 'categoria': 'Italiano', 'ativo': False}]
+
+
 def exibir_nome_do_programa():
   
   print('🆂🅰🅱🅾🆁 🅴🆇🅿🆁🅴🆂🆂\n')
@@ -38,7 +42,10 @@ def listar_restaurantes():
     os.system('cls')
     
     for restaurante in restaurantes :
-     print(f'.{restaurante}')
+     nome_restaurante = restaurante['nome']
+     categoria = restaurante['categoria']
+     ativo = restaurante['ativo']
+     print(f'.{nome_restaurante} | {categoria} | {ativo}')
     voltar_ao_menu_principal()
   
   

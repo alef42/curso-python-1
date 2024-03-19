@@ -10,6 +10,8 @@ def exibir_nome_do_programa():
   print('🆂🅰🅱🅾🆁 🅴🆇🅿🆁🅴🆂🆂\n')
 
 def exibir_opcoes():
+      '''Essa função é responsavel por Exibir opções'''
+  
       print('1. Cadastrar Restaurante')
       print('2. Listar Restaurante')
       print('3. Alternar estado do Restaurante')
@@ -35,6 +37,14 @@ def exibir_subtitulos(texto):
   
 
 def cadastrar_novo_restaurante():
+    '''Essa função é responsavel por cadastrar um novo restaurante
+    Inputs:
+    - Nome do Restaurante
+    - Categoria
+    
+    Outputs:
+    - Adiciona um novo restaurante a lista de restaurantes
+    '''
     exibir_subtitulos('Cadastrando restaurantes\n')
     nome_do_restaurante = input('Digite o nome do restaurante que deseja cadastrar: \n')
     categoria = input(f'Digite o nome da Categoria do Restaurante {nome_do_restaurante}\n')
@@ -44,6 +54,7 @@ def cadastrar_novo_restaurante():
     voltar_ao_menu_principal()
     
 def listar_restaurantes():
+    '''Essa função é responsavel por Listar os restaurante'''
     exibir_subtitulos('Listando Restaurante\n')    
     print(f'{'Nome do Restaurante'.ljust(22)} | {'Categoria'.ljust(20)} | Staus')
     for restaurante in restaurantes :
@@ -55,6 +66,7 @@ def listar_restaurantes():
     voltar_ao_menu_principal()
     
 def alternar_estado_do_restaurante():
+  '''Essa função é responsavel por Alterar o estado do restaurante'''
   exibir_subtitulos('Alternando estado do Restaurante')
   nome_restaurante = input('digite o nome do restaurantre em que deseja alterar o estado: ')
   restaurante_encontrado = False
@@ -73,6 +85,7 @@ def alternar_estado_do_restaurante():
   
   
 def escolher_opcao():
+  '''Essa função é responsavel por escolher uma opção'''
   try: 
         opcao_escolhida = int(input('escolha uma opção: '))
         #opcao_escolhida = int(opcao_escolhida)
